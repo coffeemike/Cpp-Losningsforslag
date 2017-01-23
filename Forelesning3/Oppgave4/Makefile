@@ -16,5 +16,7 @@ default: $(SRC_FILES)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o bin/$(NAME)
 run:
 	./bin/$(NAME)
+valgrind:
+	valgrind ./bin/$(NAME)
 clean:
 	rm bin/$(NAME)
